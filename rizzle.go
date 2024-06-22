@@ -38,7 +38,7 @@ func check(err error) {
 	}
 }
 func connect() *sql.DB {
-	db, err := sql.Open("sqlite3", "./Rongstad.sqlite")
+	db, err := sql.Open("sqlite3", "./rizzle.sqlite")
 	check(err)
 	return db
 }
