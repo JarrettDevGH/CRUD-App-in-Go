@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Marc's List</title>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href='/index'>Home</a></li>
+        <li><a href='/create'>Create</a></li>
+        <li><a href='/logout'>Logout</a></li>
+    </ul>
+</nav>
+<h1>View Recomendations</h1>
+<table>
+    <tr>
+      <th>Recomendation Link</th>
+      <th>Category</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    {{ range . }}
+    <tr>
+      <td><a href="{{ .Url }}">{{ .Url }}</a></td>
+      <td>{{ .Category }}</td>
+      <td><a href="/update?id={{ .Id }}">UPDATE</a></td>
+      <td><form action = "/delete" method = "POST">
+        <input type="hidden" name="id" value="{{ .Id }}">
+        <input type="submit" value="DELETE">
+      </form></td>
+    </tr>
+    {{ end }}
+  </table>
+</body> 
+
+</html>

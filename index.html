@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/style1.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            {{ if .}}
+            <li><a href='/create'>Create</a></li>
+            <li><a href='/read'>Read</a></li>
+            <li><a href='/logout'>Logout</a></li>
+            {{ else }}
+            <li><a href='/index'>Home</a></li>
+            <li><a href='/user'>Sign Up</a></li>
+            <li><a href='/login'>Login</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+
+<h1>RFM</h1>
+<p>Youtube Videos Recomended to Marc Rubin</p>
+<p>Login Or Sign Up</p>
+
+</body> 
+
+</html>

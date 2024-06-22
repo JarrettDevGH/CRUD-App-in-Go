@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href='/index'>Home</a></li>
+            <li><a href='/create'>Create</a></li>
+            <li><a href='/read'>Read</a></li>
+            <li><a href='/logout'>Logout</a></li>
+        </ul>
+    </nav>
+<h1>Update Recomendation</h1>
+<form action="/update" method="POST">
+    <input type="hidden" name="id" value ="{{ .Id }}">
+    <input type="hidden" name="hidden" value="{{ .User_id }}">
+    <label for="URL">URL:</label>
+    <input type="text" id="URL" name="recURL" label="URL" value = "{{ .Url }}" required>
+    <label for="cat">Category:</label>
+    <input type="text" id="cat" name="category" label="Category" value = "{{ .Category }}" required>
+    <input type="submit" value="UPDATE"></form>
+</body>
+
+</html>
